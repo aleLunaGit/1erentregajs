@@ -1,6 +1,7 @@
 alert("Bienvenido")
 alert("Por favor, ingrese correctamente los siguientes datos")
-const registroDiario = []
+
+
 class Clientes {
     constructor(nombre, apellido, dni) {
         this.nombre = nombre,
@@ -8,6 +9,23 @@ class Clientes {
             this.dni = dni
     }
 }
+
+
+let registroClientes = []
+const cliente1 = new Clientes("Daniel", "Aramayo", 12864871)
+registroClientes.push(cliente1)
+const cliente2 = new Clientes("Jose", "Cortez", 32321542)
+registroClientes.push(cliente2)
+const cliente3 = new Clientes("David", "Hernandez", 22456123)
+registroClientes.push(cliente3)
+const cliente4 = new Clientes("Miguel", "Luna", 34568815)
+registroClientes.push(cliente4)
+const cliente5 = new Clientes("Enrique", "Sosa", 41654789)
+registroClientes.push(cliente5)
+
+console.log(registroClientes)
+
+
 
 class Prestamo {
     constructor(monto, plazo, veraz) {
@@ -17,11 +35,21 @@ class Prestamo {
     }
 }
 
-let cliente1 = new Clientes(prompt("Ingrese su nombre"), prompt("Ingrese su apellido"), parseInt(prompt("Ingrese su edad")))
-registroDiario.push(cliente1)
+let registroPrestamos = []
+const prestamo1 = new Prestamo(40000, 12, 3)
+const prestamo2 = new Prestamo(250000, 24, 1)
+const prestamo3 = new Prestamo(78000, 36, 1)
+const prestamo4 = new Prestamo(50000, 6, 2)
+const prestamo5 = new Prestamo(150000, 12, 2)
 
-let prestamo1 = new Prestamo(parseInt(prompt("Ingrese monto de préstamo")), parseInt(prompt("Ingrese el plazo del préstamo")), parseInt(prompt("Ingrese su situación de veraz")))
-
-class Promociones {
-
+function nuevoCliente(){
+    let nombre = prompt("Ingrese su nombre")
+    let apellido = prompt("Ingrese su apellido")
+    let dni = parseInt(prompt("Ingrese su dni"))
+    let clienteNuevo = new Profesores (registroPrestamos.length+1,nombre, apellido, dni)
+    registroPrestamos.push(clienteNuevo)
 }
+
+nuevoCliente()
+
+// no he tenido el tiempo de realizar realmente lo que tengo en mente, lo estaré terminando para la reentrega.
