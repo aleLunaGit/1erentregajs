@@ -62,9 +62,14 @@ function nuevoCliente(){
 }
 
 function nuevoPrestamo(){
-    let monto = parseInt(prompt("Ingrese el monto a solicitar"))
-    let plazo = parseInt(prompt("Ingrese el plazo del préstamo"))
-    let veraz = parseInt(prompt("Indique su situación de veraz"))
+    do{ 
+    alert(`Ingrese correctamente los siguientes datos`)   
+    monto = parseInt(prompt("Ingrese el monto a solicitar"))
+    plazo = parseInt(prompt("Ingrese el plazo del préstamo"))
+    veraz = parseInt(prompt("Indique su situación de veraz"))
+} while(veraz >= 5 || plazo >= 36){
+    alert(`Su informacion se está procesando, aguarde por favor...`)
+}
     prestamoNuevo = new Prestamo (monto, plazo, veraz)
     registroPrestamos.push(prestamoNuevo)
     return prestamoNuevo
@@ -73,7 +78,7 @@ function nuevoPrestamo(){
 nuevoCliente()
 nuevoPrestamo()
 
-console.log(`Felicitaciones ${clienteNuevo.nombre} su préstamo de ${prestamoNuevo.monto} fue depositado con éxito en su cuenta`)
+alert(`Felicitaciones ${clienteNuevo.nombre} su préstamo de ${prestamoNuevo.monto} fue depositado con éxito en su cuenta`)
 
 console.log(`Prestamos del día de hoy`)
 for (const datos of registroPrestamos){
