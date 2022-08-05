@@ -62,6 +62,7 @@ function nuevoCliente(){
 }
 
 function nuevoPrestamo(){
+    
     do{ 
     alert(`Ingrese correctamente los siguientes datos`)   
     monto = parseInt(prompt("Ingrese el monto a solicitar"))
@@ -70,6 +71,7 @@ function nuevoPrestamo(){
 } while(veraz >= 5 || plazo >= 36){
     alert(`Su informacion se está procesando, aguarde por favor...`)
 }
+
     prestamoNuevo = new Prestamo (monto, plazo, veraz)
     registroPrestamos.push(prestamoNuevo)
     return prestamoNuevo
