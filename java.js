@@ -47,14 +47,27 @@ registroPrestamos.push(prestamo4)
 const prestamo5 = new Prestamo(150000, 12, 2)
 registroPrestamos.push(prestamo5)
 
+console.log(registroPrestamos)
+
 function nuevoCliente(){
     let nombre = prompt("Ingrese su nombre")
     let apellido = prompt("Ingrese su apellido")
     let dni = parseInt(prompt("Ingrese su dni"))
-    let clienteNuevo = new Clientes (registroPrestamos.length+1,nombre, apellido, dni)
-    registroPrestamos.push(clienteNuevo)
+    let clienteNuevo = new Clientes (nombre, apellido, dni)
+    registroClientes.push(clienteNuevo)
+}
+
+function nuevoPrestamo(){
+    let monto = parseInt(prompt("Ingrese el monto a solicitar"))
+    let plazo = parseInt(prompt("Ingrese el plazo del préstamo"))
+    let veraz = parseInt(prompt("Indique su situación de veraz"))
+    let prestamoNuevo = new Prestamo (monto, plazo, veraz)
+    registroPrestamos.push(prestamoNuevo)
 }
 
 nuevoCliente()
+nuevoPrestamo()
+
+
 
 // no he tenido el tiempo de realizar realmente lo que tengo en mente, lo estaré terminando para la reentrega.
