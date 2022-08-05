@@ -49,25 +49,38 @@ registroPrestamos.push(prestamo5)
 
 console.log(registroPrestamos)
 
+let clienteNuevo = ("")
+let prestamoNuevo = ("")
+
 function nuevoCliente(){
     let nombre = prompt("Ingrese su nombre")
     let apellido = prompt("Ingrese su apellido")
     let dni = parseInt(prompt("Ingrese su dni"))
-    let clienteNuevo = new Clientes (nombre, apellido, dni)
+    clienteNuevo = new Clientes (nombre, apellido, dni)
     registroClientes.push(clienteNuevo)
+    return clienteNuevo
 }
 
 function nuevoPrestamo(){
     let monto = parseInt(prompt("Ingrese el monto a solicitar"))
     let plazo = parseInt(prompt("Ingrese el plazo del préstamo"))
     let veraz = parseInt(prompt("Indique su situación de veraz"))
-    let prestamoNuevo = new Prestamo (monto, plazo, veraz)
+    prestamoNuevo = new Prestamo (monto, plazo, veraz)
     registroPrestamos.push(prestamoNuevo)
+    return prestamoNuevo
 }
 
 nuevoCliente()
 nuevoPrestamo()
 
+console.log(`Felicitaciones ${clienteNuevo.nombre} su préstamo de ${prestamoNuevo.monto} fue depositado con éxito en su cuenta`)
+
+console.log(`Prestamos del día de hoy`)
+for (const datos of registroPrestamos){
+    console.log(datos.monto)
+    console.log(datos.plazo)
+    console.log(datos.veraz)
+}
 
 
 // no he tenido el tiempo de realizar realmente lo que tengo en mente, lo estaré terminando para la reentrega.
