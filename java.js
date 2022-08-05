@@ -32,7 +32,29 @@ class Prestamo {
         this.monto = monto,
             this.plazo = plazo,
             this.veraz = veraz
-    }
+    }    
+    // sumaVeraz(){
+    //     switch (veraz) {
+    //         case 1:
+    //             monto = monto + (monto*0.14)
+    //             break
+    //         case 2:
+    //             monto = monto + (monto*0.18)
+    //             break
+    //         case 3:
+    //             monto = monto + (monto*0.22)
+    //             break
+    //         case 4:
+    //             monto = monto + (monto*0.25)
+    //             break
+    //         case 5:
+    //             monto = monto + (monto*0.33)
+    //             break
+    //         default:
+               
+    //   }
+
+// }
 }
 
 let registroPrestamos = []
@@ -62,7 +84,7 @@ function nuevoCliente(){
 }
 
 function nuevoPrestamo(){
-    
+
     do{ 
     alert(`Ingrese correctamente los siguientes datos`)   
     monto = parseInt(prompt("Ingrese el monto a solicitar"))
@@ -71,7 +93,6 @@ function nuevoPrestamo(){
 } while(veraz >= 5 || plazo >= 36){
     alert(`Su informacion se está procesando, aguarde por favor...`)
 }
-
     prestamoNuevo = new Prestamo (monto, plazo, veraz)
     registroPrestamos.push(prestamoNuevo)
     return prestamoNuevo
@@ -88,6 +109,7 @@ for (const datos of registroPrestamos){
     console.log(datos.plazo)
     console.log(datos.veraz)
 }
+
 
 
 // no he tenido el tiempo de realizar realmente lo que tengo en mente, lo estaré terminando para la reentrega.
