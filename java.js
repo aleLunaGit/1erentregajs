@@ -37,16 +37,21 @@ class Prestamo {
 
 let registroPrestamos = []
 const prestamo1 = new Prestamo(40000, 12, 3)
+registroPrestamos.push(prestamo1)
 const prestamo2 = new Prestamo(250000, 24, 1)
+registroPrestamos.push(prestamo2)
 const prestamo3 = new Prestamo(78000, 36, 1)
+registroPrestamos.push(prestamo3)
 const prestamo4 = new Prestamo(50000, 6, 2)
+registroPrestamos.push(prestamo4)
 const prestamo5 = new Prestamo(150000, 12, 2)
+registroPrestamos.push(prestamo5)
 
 function nuevoCliente(){
     let nombre = prompt("Ingrese su nombre")
     let apellido = prompt("Ingrese su apellido")
     let dni = parseInt(prompt("Ingrese su dni"))
-    let clienteNuevo = new Profesores (registroPrestamos.length+1,nombre, apellido, dni)
+    let clienteNuevo = new Clientes (registroPrestamos.length+1,nombre, apellido, dni)
     registroPrestamos.push(clienteNuevo)
 }
 
